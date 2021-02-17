@@ -1,0 +1,25 @@
+	
+  HTTP: protocolo de transferencia de hipertexto
+
+- GET: método de envio por parametros cliente a traves de la url
+- PUT: actualizar recursos
+- DELETE: eliminar un recurso
+- POST: para enviar un recurso (parámetros, JSON)
+
+- HEAD: 
+
+/* VARIABLES DE ENTORNO */
+
+
+
+
+
+
+	
+
+-  
+-  
+-  
+
+
+
