@@ -1,14 +1,13 @@
 extends ./layout.pug
 block content
-	form(action="/users", method="POST")
-		center
-			div(class="form-group")
-				label(for="Nombre") Nombre
-				input(type='text', name='Nombre', id='Nombre', class='form-control')
-			div(class="form-group")
-				label(for="Password") Contraseña 
-				input(type='password', name='Password', id='Password', class='form-control')
-			div
-				input(type="submit", value="Entrar", class="btn btn-success")
+	center
+		div(class="form-group")
+			label(for="Nombre") Nombre
+			input(type='text', name='Nombre', id='Nombre', class='form-control')
+		div(class="form-group")
+			label(for="Password") Contraseña 
+			input(type='password', name='Password', id='Password', class='form-control')
+		div
+			input(type="button", value="Entrar", onClick="save();", class="btn btn-success")
 
 

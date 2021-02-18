@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const logger = require('../deployments/logger').logger;
 const router = Router();
 
 const User = require('../models/user').User;
@@ -45,13 +46,23 @@ router.post('/sign', function(req,res){  // metodo para desplegar la base
 
 		if(Object.entries(doc).length === 0){
 			console.log('El usuario que intento registrar no estaba registrado');
-			res.redirect('/login');
+	//		res.redirect('/login');
+			res.json({
+				message: 'Usuaio y/o contraseña incorrecta',
+				redirec: '/login'
+			});
+
+			logger.error({message: 'intento de login', level: 'info', status: 404, req});
 		}else{
 			console.log('ingreso al sistema usuario: ' + doc[0].Email );
 			console.log('Creando sesion');
 			req.session.user_id = doc[0]._id;
 			console.log('Sesion creada: ' + req.session.user_id);
-			res.redirect('/users');
+		//	res.redirect('/users');
+			res.json({
+				message: 'bienvenido',
+				redirec: '/users'
+			});
 		}
 	}); // devuelve un arreglo a los documentos
 });

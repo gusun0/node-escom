@@ -4,19 +4,21 @@ html(lang="es")
 		title Ejemplo de Layout
 		meta(charset="utf-8")
 		link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css")
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+		script(src="/scripts/alerts.js")
 	body
 		center
 			h1(class="text-success") Todo este segmento es fijo
-		hr
-		br
-		ul(class="navbar-nav")
+			hr
+			br
+			ul(class="navbar-nav")
 			li(class="nav-item")
 				a(class="nav-link text-white" href="/new_user") Registro
 			li(class="nav-item")
 				a(class="nav-link text-white" href="/login") Inicio
-		br
-		br
-		block content	
-		br
-		hr
+			br
+			br
+			block content	
+			br
+			hr
 		
